@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste - GitHub Pages</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+      padding: 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .badge {
+      display: inline-block;
+      background: #16a34a;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      letter-spacing: .5px;
+    }
+    h1 { font-size: 28px; margin-bottom: 12px; }
+    p { color: #94a3b8; line-height: 1.6; margin-bottom: 8px; }
+    .info {
+      margin-top: 24px;
+      padding: 16px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 10px;
+      font-family: 'Consolas', monospace;
+      font-size: 13px;
+      text-align: left;
+      word-break: break-all;
+    }
+    .info span { color: #38bdf8; }
+    .dot {
+      width: 10px; height: 10px;
+      background: #22c55e;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+      box-shadow: 0 0 12px #22c55e;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">FUNCIONANDO</div>
+    <h1><span class="dot"></span>Servidor no Ar</h1>
+    <p>Se você está vendo esta página, o GitHub Pages está servindo seu site corretamente.</p>
+    <p>Próximo passo: apontar o domínio personalizado para o GitHub.</p>
+    <div class="info">
+      <div><span>URL:</span> <span id="url"></span></div>
+      <div><span>Host:</span> <span id="host"></span></div>
+      <div><span>Carregado em:</span> <span id="hora"></span></div>
+      <div><span>Status:</span> <span>200 OK</span></div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('url').textContent = window.location.href;
+    document.getElementById('host').textContent = window.location.hostname;
+    document.getElementById('hora').textContent = new Date().toLocaleString('pt-BR');
+  </script>
+</body>
+</html>
